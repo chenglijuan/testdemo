@@ -1,8 +1,6 @@
 package com.example.demo.chapter1;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 /**
  * @Author: chenglijuan
@@ -32,6 +30,27 @@ public class BaseAnnotation {
     @AfterMethod
     public void afterMethod(){
         System.out.println("afterMethod:在测试方法之前");
+    }
+
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("BeforeClass: 在类运行之前BeforeClass");
+    }
+
+    @AfterClass
+    public void afterClass(){
+        System.out.println("AfterClass: 在类运行之前AfterClass");
+    }
+
+    //测试套件   在类之前运行，一个测试套件可以包含多个类
+    @BeforeSuite(groups = "base")
+    public void beforeSuite(){
+        System.out.println("beforeSuite: 测试套件");
+    }
+
+    @AfterSuite
+    public void afterSuite(){
+        System.out.println("afterSuite:测试套件");
     }
 
 
