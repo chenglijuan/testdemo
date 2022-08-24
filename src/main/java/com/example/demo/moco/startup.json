@@ -62,11 +62,12 @@
       "uri": "/get/cookie",
       "method": "get",
       "cookies": {
-        "login": "true"
+        "token": "true"
       }
     },
     "response":{
-    "text": "模拟带参数的get请求--使用forms"
+      "status":"200",
+    "text": "模拟一个带cookie的get请求"
     }
   },
   {
@@ -124,8 +125,7 @@
     "response":{
       "status": "200",
       "cookies": {
-        "name": "zhangsan",
-        "login": "true"
+        "token": "true"
       },
       "text": "这是一个会返回cookie的get请求"
     }
