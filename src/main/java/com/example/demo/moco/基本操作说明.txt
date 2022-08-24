@@ -1,0 +1,9 @@
+java -Dfile.encoding=UTF-8 -jar ./moco-runner-0.11.1-standalone.jar http -p 8888 -c startup.json
+
+-Dfile.encoding=UTF-8  解决启动后浏览器访问中文乱码问题
+post 带参数请求不能用queries(conten-type)  使用forms
+post 请求参数使用json格式
+"json": {
+        "name": "huhansan",
+        "age": "32"
+      }

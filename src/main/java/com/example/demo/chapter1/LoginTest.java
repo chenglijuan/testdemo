@@ -14,4 +14,10 @@ public class LoginTest {
     public void loginTest(){
         System.out.println("支付测试：loginTest");
     }
+
+
+    @Test
+    public void loginTest1(){
+        System.out.println("支付测试：loginTest1");
+    }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name ="suit1">
+    <test name="grouptest">
+        <classes>
+            <parameter name="name" value="张三"/>
+            <parameter name="age" value="15"/>
+
+            <class name="com.example.demo.chapter1.param.ParamDemo2"></class>
+        </classes>
+    </test>
+</suite>
