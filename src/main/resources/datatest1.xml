@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="datasuit1">
+    <test name="datatest1">
+        <classes>
+            <parameter name="name" value="zhangsan"></parameter>
+            <parameter name="age" value="10"></parameter>
+            <class name="com.example.demo.chapter1.dataprovride.DataTest1"></class>
+        </classes>
+    </test>
+</suite>

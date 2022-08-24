@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name ="suit1" parallel ="methods" thread-count="3">
+    <test name="grouptest">
+        <classes>
+            <class name="com.example.demo.chapter1.threadDemo.MultiThread"></class>
+        </classes>
+    </test>
+</suite>

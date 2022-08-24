@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name ="suit1">
+
+    <groups>
+        <run>
+            <include name="GroupClass"></include>
+        </run>
+    </groups>
+
+    <test name="grouptest">
+        <classes>
+            <class name="com.example.demo.chapter1.group.GroupClass1"></class>
+            <class name="com.example.demo.chapter1.group.GroupClass2"></class>
+            <class name="com.example.demo.chapter1.group.GroupClass3"></class>
+        </classes>
+    </test>
+</suite>

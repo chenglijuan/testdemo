@@ -4,43 +4,41 @@ import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
 
-/**
- * @Author: chenglijuan
- * @Data: 2022/8/16  下午8:22
- * @Decription:
- * @Modified:
- */
+
 public class GroupTest {
 
     @Test(groups = "server")
-    public void servertest1(){
-        System.out.println("servertest1");
+    public void test1(){
+        System.out.println("server测试方法1======》test1");
     }
-
     @Test(groups = "server")
-    public void servertest2(){
-        System.out.println("servertest2");
+    public void test2(){
+        System.out.println("server测试方法2======》test2");
     }
-
-//    @Test(groups = "client")
-//    public void clienttest1(){
-//        System.out.println("clienttest1");
-//    }
-//
-//    @Test(groups = "client")
-//    public void clienttst2(){
-//        System.out.println("clienttst2");
-//    }
+    @Test(groups = "client")
+    public void test3(){
+        System.out.println("client测试方法3======》test3");
+    }
+    @Test(groups = "client")
+    public void test4(){
+        System.out.println("client测试方法4======》test4");
+    }
 
     @BeforeGroups("server")
-    public void  beforeServerTest1(){
-        System.out.println("beforeServerTest1======");
+    public void serverBeforeGroup(){
+        System.out.println("serverBeforeGroup=====>");
     }
-
     @AfterGroups("server")
-    public void  afterServerTest1(){
-        System.out.println("afterServerTest1======");
+    public void serverAfterGroups(){
+        System.out.println("serverAfterGroups=====>");
     }
-
+    @BeforeGroups("client")
+    public void clientBeforeGroup(){
+        System.out.println("clientBeforeGroup=====>");
+    }
+    @AfterGroups("client")
+    public void clientAfterGroup(){
+        System.out.println("clientAfterGroup=====>");
+    }
 
 }
