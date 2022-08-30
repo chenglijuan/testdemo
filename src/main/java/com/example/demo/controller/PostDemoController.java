@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import com.example.demo.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -15,14 +16,14 @@ import java.util.Objects;
  * @Modified:
  */
 @RestController
-@RequestMapping("/getDmo")
-public class GetDemoController {
+@RequestMapping("/postDmo")
+public class PostDemoController {
 
     /**
-     * get请求返回cookie
+     * POST请求返回cookie
      * @return
      */
-    @RequestMapping(value = "/getCookie",method = RequestMethod.GET)
+    @RequestMapping(value = "/postCookie",method = RequestMethod.POST)
     public String getCookie(HttpServletResponse response){
        Cookie cookie = new Cookie("login","true");
        response.addCookie(cookie);
@@ -30,7 +31,7 @@ public class GetDemoController {
     }
 
     /**
-     * get 携带请求Cookie和参数方法1
+     * POST 携带请求Cookie和参数方法1
      * @param response
      * @param request
      * @param userName
@@ -38,7 +39,7 @@ public class GetDemoController {
      * @return
      */
 
-    @RequestMapping(value = "/getWithParam1",method = RequestMethod.GET)
+    @RequestMapping(value = "/postWithParam1",method = RequestMethod.POST)
     public String getWithParam1(HttpServletResponse response,HttpServletRequest request,
                                 @RequestParam String userName,
                                 @RequestParam String password){
@@ -56,22 +57,19 @@ public class GetDemoController {
      * get请求携带cookie和参数的第二种方法
      * @param response
      * @param request
-     * @param pageNum
-     * @param pageSize
      * @return
      */
 
-    @RequestMapping(value = "/getWithParam2/{pageNum}/{pageSize}",method = RequestMethod.GET)
+    @RequestMapping(value = "/postWithParam2",method = RequestMethod.POST)
     public String getWithParam2(HttpServletResponse response,HttpServletRequest request,
-                                @PathVariable("pageNum") Integer pageNum,
-                                @PathVariable("pageSize") String pageSize){
+                                @RequestBody User user){
         Cookie[] cookie = request.getCookies();
         if(Objects.isNull(cookie)){
             return "未携带cookie";
         }
-        System.out.println("pageNum="+pageNum);
-        System.out.println("pageSize="+pageSize);
-        return "恭喜你获取cookie成功";
+        System.out.println("name="+user.getName());
+        System.out.println("userName="+user.getUserName());
+        return "恭喜你登录成功";
     }
 
 }
