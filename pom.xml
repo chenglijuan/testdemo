@@ -6,6 +6,7 @@
     <modules>
         <module>house</module>
         <module>house</module>
+        <module>house</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
